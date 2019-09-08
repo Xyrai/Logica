@@ -15,10 +15,10 @@ class MainActivity : AppCompatActivity() {
 
         btnSubmit.setOnClickListener {
             checkAnswers(
-                etAnswer1.text.toString(),
-                etAnswer2.text.toString(),
-                etAnswer3.text.toString(),
-                etAnswer4.text.toString()
+                    etAnswer1.text.toString(),
+                    etAnswer2.text.toString(),
+                    etAnswer3.text.toString(),
+                    etAnswer4.text.toString()
             )
         }
     }
@@ -29,22 +29,23 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        if (quizLevel == 1 && answer1 == R.string.letter_T.toString() &&
-            answer2 == R.string.letter_F.toString() &&
-            answer3 == R.string.letter_F.toString() &&
-            answer4 == R.string.letter_F.toString()
+        if (quizLevel == 1 && answer1 == "T" &&
+                answer2 == "F" &&
+                answer3 == "F" &&
+                answer4 == "F"
         ) {
             Toast.makeText(this, getString(R.string.correct_answer), Toast.LENGTH_SHORT).show()
             resetFields()
             moveToDisjunctionLevel()
+        } else if (answer1 == "T" &&
+                answer2 == "T" &&
+                answer3 == "T" &&
+                answer4 == "F"
+        ) {
+            Toast.makeText(this, getString(R.string.finish), Toast.LENGTH_SHORT).show()
         } else {
-            if (answer1 == R.string.letter_T.toString() &&
-                answer2 == R.string.letter_T.toString() &&
-                answer3 == R.string.letter_T.toString() &&
-                answer4 == R.string.letter_F.toString()
-            ) {
-                Toast.makeText(this, getString(R.string.finish), Toast.LENGTH_SHORT).show()
-            }
+            Toast.makeText(this, R.string.incorrect_answer, Toast.LENGTH_SHORT).show()
+            resetFields()
         }
     }
 
