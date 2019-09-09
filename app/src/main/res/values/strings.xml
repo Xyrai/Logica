@@ -10,8 +10,8 @@
     <string name="caret">A ^ B</string>
     <string name="reversed_caret">A ∨ B</string>
     <string name="empty_field">Fill in all fields!</string>
-    <string name="correct_answer">Well done!</string>
-    <string name="finish">Excellent, you have completed all levels!</string>
+    <string name="correct_answer">Well done, on to disjunction!</string>
+    <string name="finish">Excellent work, you have completed all levels!</string>
     <string name="answer">Answer&#8230;</string>
     <string name="incorrect_answer">Incorrect answer, try again!</string>
 </resources>
